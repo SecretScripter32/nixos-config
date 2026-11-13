@@ -42,3 +42,25 @@ Make sure the hostname is named to your needs.
 the hardware-configuration.nix file is specific to my PC.
 
 You should generate your own hardware configuration file when installing this system rather than blindly reusing mine.
+
+## installation
+
+before installing please check the important section above to prevent build errors
+
+# 1. Clone the Repository
+
+```console
+$ git clone https://github.com/SecretScripter32/nixos-config.git
+$ cd nixos-config
+```
+
+
+# 2. Configure Apply The configuration
+
+Once you've made the necessary changes, run:
+
+
+```console
+$ sudo nixos-rebuild switch --flake "$PWD#nixos"
+```
+```
