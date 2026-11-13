@@ -49,7 +49,7 @@ before installing please check the important section above to prevent build erro
 
 # 1. Clone the Repository
 
-```console
+
 ```console
 $ git clone https://github.com/SecretScripter32/nixos-config.git
 $ cd nixos-config
