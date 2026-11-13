@@ -1,7 +1,7 @@
 # My NixOS Dotfiles
-This my personal NixOS configuration Dotfiles for my PC
+This is my personal NixOS configuration Dotfiles for my PC
 
-My configuration has lots of preinstalled packages and flakes preinstalled 
+My configuration has lots of packages and flakes preinstalled 
 
 ## Features
 
@@ -29,7 +29,7 @@ If you wish to change the username feel free to.
 ## Hostname
 
 the hostname is another setting you many want to change.
-
+if you wish to change the hostname edit the files below and change the hostname under them to prevent build errors
 
 
 - [`modules/system/networking.nix`](modules/system/netoworking.nix)
