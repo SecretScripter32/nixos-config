@@ -14,17 +14,18 @@
 # ===============================================
 
 {
-  fonts.packages = with pkgs; [
-    nerd-fonts.blex-mono
-    nerd-fonts.iosevka
-    nerd-fonts.caskaydia-mono
-    nerd-fonts.jetbrains-mono
-    nerd-fonts.fira-code
-    nerd-fonts.hack
-    nerd-fonts.meslo-lg
+  fonts.packages = builtins.attrValues {
+    inherit (pkgs.nerd-fonts)
+      blex-mono
+      iosevka
+      caskaydia-mono
+      jetbrains-mono
+      fira-code
+      hack
+      meslo-lg;
 
-    googlesans-code
-
-    material-symbols
-  ];
+    inherit (pkgs)
+      googlesans-code
+      material-symbols;
+  };
 }

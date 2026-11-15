@@ -21,7 +21,7 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, hyprland, qylock, ... } @ inputs: {
+  outputs = { nixpkgs, ... } @ inputs: {
     nixosConfigurations."Gary-NixOS-PC" = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
 
@@ -35,16 +35,17 @@
 
         inputs.qylock.nixosModules.default
 
-        {
+        ({ ... }: {
+
           home-manager = {
             useGlobalPkgs = true;
             useUserPackages = true;
 
+            backupFileExtension = "backup";
+
             users.gary = import ./home.nix;
           };
-        }
 
-        ({ pkgs, ... }: {
           programs.qylock = {
             enable = true;
             theme = "pixel-dusk-city";

@@ -35,5 +35,29 @@
     };
   };
 
-  programs.fish.enable = true;
+  programs.fish = {
+    enable = true;
+
+    interactiveShellInit = ''
+      set fish_greeting
+    '';
+
+    shellAliases = {
+      nix-rebuild-switch = "sudo nixos-rebuild-switch --flake /etc/nixos#Gary-NixOS-PC";
+      nix-update = "nix flake update";
+    };
+
+    shellInit = ''
+      set -Ux EDITOR nvim
+      set -Ux VISUAL nvim
+      set -Ux SUDO_EDITOR nvim
+
+      fastfetch
+    '';
+  };
+
+  programs.starship = {
+    enable = true;
+    enableFishIntegration = true;
+  };
 }
