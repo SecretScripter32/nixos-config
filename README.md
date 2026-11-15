@@ -1,7 +1,9 @@
 # My NixOS Dotfiles
 This is my personal NixOS configuration Dotfiles for my PC
 
-My configuration has lots of packages and flakes preinstalled 
+My configuration has lots of packages and flakes preinstalled
+
+![My Hyprland Dotfiles](assets/showcase.png)
 
 ## Features
 
@@ -13,6 +15,8 @@ My configuration has lots of packages and flakes preinstalled
 - Qylock sddm themes
 - Plymouth Boot themes
 - Modular configuration
+
+I am developing the shell called GazShell that you have seen on screen. if you wish to install this dotfiles it will come in the next release
 
 ## Important
 
