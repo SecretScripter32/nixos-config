@@ -86,6 +86,7 @@
     # Tools
 
     git
+    gh
     wget
     curl
     fzf

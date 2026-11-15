@@ -18,8 +18,10 @@
     nerd-fonts.blex-mono
     nerd-fonts.iosevka
     nerd-fonts.caskaydia-mono
-
-    jetbrains-mono
+    nerd-fonts.jetbrains-mono
+    nerd-fonts.fira-code
+    nerd-fonts.hack
+    nerd-fonts.meslo-lg
 
     googlesans-code
 
