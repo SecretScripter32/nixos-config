@@ -43,7 +43,7 @@
     '';
 
     shellAliases = {
-      nix-rebuild-switch = "sudo nixos-rebuild-switch --flake /etc/nixos#Gary-NixOS-PC";
+      nix-rebuild-switch = "sudo nixos-rebuild switch --flake /etc/nixos#Gary-NixOS-PC";
       nix-update = "nix flake update";
     };
 
