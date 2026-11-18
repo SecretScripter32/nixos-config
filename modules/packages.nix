@@ -119,6 +119,10 @@
     bottles
     lutris
 
+    # Services
+
+    playerctl
+
     # Jetbrains development
 
     jetbrains.clion
