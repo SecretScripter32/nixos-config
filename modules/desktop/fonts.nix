@@ -26,6 +26,7 @@
 
     inherit (pkgs)
       googlesans-code
-      material-symbols;
+      material-symbols
+      geist-font;
   };
 }

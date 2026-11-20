@@ -83,6 +83,26 @@
         "type": "github"
       }
     },
+    "helium": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1795035192,
+        "narHash": "sha256-QpwgEbDFMnKvn5q0eXQwn1es3LNcfxRZMHE9anF54W0=",
+        "owner": "amaanq",
+        "repo": "helium-flake",
+        "rev": "9be7b412d7a7fe42907f3b3627c72e304bab475e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "amaanq",
+        "repo": "helium-flake",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -511,6 +531,7 @@
     },
     "root": {
       "inputs": {
+        "helium": "helium",
         "home-manager": "home-manager",
         "hyprland": "hyprland",
         "nixpkgs": "nixpkgs_2",

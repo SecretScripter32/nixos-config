@@ -44,6 +44,10 @@
     package = pkgs.openrgb-with-all-plugins;
   };
 
+  # development
+
+  qt.enable = true;
+
   # Enable Starship prompt
 
   programs.starship.enable = true;
@@ -168,7 +172,8 @@
     kdePackages.qtbase
     kdePackages.qtdeclarative
     kdePackages.qttools
-
+    
+    qt6.qtimageformats
     qt6Packages.qt6ct
     libsForQt5.qt5ct
 

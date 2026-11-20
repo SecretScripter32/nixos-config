@@ -14,6 +14,11 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     hyprland.url = "github:hyprwm/Hyprland";
     qylock.url = "github:Darkkal44/qylock";
+    
+    helium = {
+       url = "github:amaanq/helium-flake";
+       inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -29,6 +34,12 @@
 
       modules = [
         ./configuration.nix
+
+        {
+          environment.systemPackages = [
+            inputs.helium.packages.x86_64-linux.default
+          ];
+        }
 
         inputs.home-manager.nixosModules.home-manager
         inputs.hyprland.nixosModules.default
