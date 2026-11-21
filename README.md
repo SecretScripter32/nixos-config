@@ -4,6 +4,7 @@ This is my personal NixOS configuration Dotfiles for my PC
 My configuration has lots of packages and flakes preinstalled
 
 ![My Hyprland Dotfiles](assets/showcase.png)
+![Screenshot2](assets/showcase2.png)
 
 ## Features
 
