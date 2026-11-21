@@ -20,6 +20,8 @@
     git
 
     grim
+    slurp
+    satty
   ];
 
   services.flameshot = {
