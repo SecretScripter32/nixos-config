@@ -174,6 +174,10 @@
     kdePackages.qttools
     
     qt6.qtimageformats
+    qt6.qtsvg
+    qt6.qtmultimedia
+    qt6.qt5compat
+
     qt6Packages.qt6ct
     libsForQt5.qt5ct
 
