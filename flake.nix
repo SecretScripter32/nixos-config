@@ -12,12 +12,18 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    matugen.url = "github:InioX/matugen";
     hyprland.url = "github:hyprwm/Hyprland";
     qylock.url = "github:Darkkal44/qylock";
     
     helium = {
        url = "github:amaanq/helium-flake";
        inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    quickshell = {
+      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     home-manager = {
@@ -42,6 +48,7 @@
         }
 
         inputs.home-manager.nixosModules.home-manager
+        inputs.matugen.nixosModules.default
         inputs.hyprland.nixosModules.default
 
         inputs.qylock.nixosModules.default

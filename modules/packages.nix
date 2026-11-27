@@ -7,7 +7,7 @@
                             /____/
 */
 
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 # ===============================================
 #                PACKAGE CONFIG
@@ -52,9 +52,8 @@
 
   programs.starship.enable = true;
 
-  # Install Thunar file manager
+  # Install Compaditibility software
 
-  programs.thunar.enable = true;
   programs.xfconf.enable = true;
 
   services.gvfs.enable = true;
@@ -116,6 +115,7 @@
     nwg-look
     gnome-disk-utility
     polkit_gnome
+    nautilus
 
     # Gaming
 
@@ -144,7 +144,7 @@
     rofi
     fuzzel
     awww
-    matugen
+    inputs.matugen.packages.${pkgs.system}.default
     matuwall
     libnotify
 
@@ -181,7 +181,7 @@
     qt6Packages.qt6ct
     libsForQt5.qt5ct
 
-    quickshell
+    inputs.quickshell.packages.${pkgs.system}.default
 
     # GStreamer packages
 
