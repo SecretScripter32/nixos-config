@@ -7,9 +7,17 @@
                                                        /____/
 */
 
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
+
+let
+  spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.hostPlatform.system};
+in 
 {
+  imports = [
+    inputs.spicetify-nix.homeManagerModules.default
+  ];
+
   home.username = "gary";
   home.homeDirectory = "/home/gary";
   home.stateVersion = "26.11";
@@ -23,6 +31,13 @@
     slurp
     satty
   ];
+
+  programs.spicetify = {
+      enable = true;
+
+      theme = spicePkgs.themes.text;
+      colorScheme = "Spotify";
+  };
 
   services.flameshot = {
     enable = true;

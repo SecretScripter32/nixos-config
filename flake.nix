@@ -26,6 +26,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    spicetify-nix = {
+        url = "github:Gerg-L/spicetify-nix";
+        inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -59,6 +64,8 @@
             useUserPackages = true;
 
             backupFileExtension = "backup";
+
+            extraSpecialArgs = { inherit inputs; };
 
             users.gary = import ./home.nix;
           };
